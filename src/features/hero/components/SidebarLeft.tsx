@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/features/hero/constants/nav-links";
 import React from "react";
 
-function DefaultSidebar() {
+export default function SidebarLeft() {
     const separatorIndex = 2;
     return (
         <nav
@@ -24,8 +23,4 @@ function DefaultSidebar() {
             ))}
         </nav>
     );
-}
-
-export default function SidebarLeft() {
-    return <DefaultSidebar />;
 }

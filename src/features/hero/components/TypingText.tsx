@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface TypingTextProps {
     words: string[];
@@ -9,9 +9,6 @@ interface TypingTextProps {
     delayBetween?: number;
 }
 
-/**
- * Animates through an array of words with a typewriter effect.
- */
 export default function TypingText({
     words,
     typingSpeed = 70,
@@ -21,37 +18,32 @@ export default function TypingText({
     const [text, setText] = useState("");
     const [wordIndex, setWordIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+    const timerRef = useRef<number | null>(null);
 
     useEffect(() => {
         const currentWord = words[wordIndex];
 
-        const timeout = setTimeout(() => {
+        timerRef.current = window.setTimeout(() => {
             if (!isDeleting) {
-                setText(currentWord.substring(0, text.length + 1));
-
-                if (text === currentWord) {
-                    setTimeout(() => setIsDeleting(true), delayBetween);
+                if (text.length < currentWord.length) {
+                    setText(currentWord.substring(0, text.length + 1));
+                } else {
+                    setIsDeleting(true);
                 }
             } else {
-                setText(currentWord.substring(0, text.length - 1));
-
-                if (text === "") {
+                if (text.length > 0) {
+                    setText(currentWord.substring(0, text.length - 1));
+                } else {
                     setIsDeleting(false);
                     setWordIndex((prev) => (prev + 1) % words.length);
                 }
             }
-        }, isDeleting ? deletingSpeed : typingSpeed);
+        }, !isDeleting && text === currentWord ? delayBetween : isDeleting ? deletingSpeed : typingSpeed);
 
-        return () => clearTimeout(timeout);
-    }, [
-        text,
-        isDeleting,
-        wordIndex,
-        words,
-        typingSpeed,
-        deletingSpeed,
-        delayBetween,
-    ]);
+        return () => {
+            if (timerRef.current) clearTimeout(timerRef.current);
+        };
+    }, [text, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, delayBetween]);
 
     return (
         <span>
