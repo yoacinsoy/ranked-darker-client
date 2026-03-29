@@ -20,8 +20,9 @@ export default function RootLayout({
             <body
                 className={`${cinzel.className} text-zinc-700 dark:text-white min-h-screen flex flex-col`}
             >
-                <ThemeProvider attribute="class" defaultTheme="dark" />
-
+                <ThemeProvider attribute="class" defaultTheme="dark">
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
