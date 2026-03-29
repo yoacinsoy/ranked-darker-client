@@ -1,20 +1,23 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import type { Project } from "@/types/project.types";
 
-/**
- * Animated card displaying a single project.
- *
- * @param {{ project: import('@/types/project.types').Project, index: number }} props
- */
-export default function CommunityCard({ project, index }) {
+interface CommunityCardProps {
+    project: Project;
+    index: number;
+}
+
+export default function CommunityCard({
+    project,
+    index,
+}: CommunityCardProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileOutOfView={{ opacity: 0, y: 40 }}
             viewport={{ margin: "-50px" }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             className="group relative rounded-2xl overflow-hidden border border-white/15 dark:border-white/10 bg-white/[0.03] dark:bg-white/[0.02] backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] hover:bg-white/[0.06] dark:hover:bg-white/[0.04] transition-all duration-500"
@@ -56,7 +59,7 @@ export default function CommunityCard({ project, index }) {
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                    {project.tags.map((tag: string) => (
                         <span
                             key={tag}
                             className="px-2.5 py-1 text-[11px] rounded-md bg-white/10 dark:bg-white/5 text-zinc-700 dark:text-zinc-300 border border-white/10"

@@ -82,45 +82,45 @@ export function useParticles(canvasRef: RefObject<HTMLCanvasElement>) {
 
             draw() {
                 ctx!.save();
-                ctx.globalAlpha = this.opacity;
-                ctx.fillStyle = "white";
-                ctx.strokeStyle = "white";
-                ctx.lineWidth = 1.5;
-                ctx.translate(this.x, this.y);
-                ctx.rotate(this.rotation);
+                ctx!.globalAlpha = this.opacity;
+                ctx!.fillStyle = "white";
+                ctx!.strokeStyle = "white";
+                ctx!.lineWidth = 1.5;
+                ctx!.translate(this.x, this.y);
+                ctx!.rotate(this.rotation);
 
                 switch (this.shape) {
                     case "square":
-                        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+                        ctx!.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
                         break;
 
                     case "triangle":
-                        ctx.beginPath();
-                        ctx.moveTo(0, -this.size);
-                        ctx.lineTo(this.size, this.size);
-                        ctx.lineTo(-this.size, this.size);
-                        ctx.closePath();
-                        ctx.fill();
+                        ctx!.beginPath();
+                        ctx!.moveTo(0, -this.size);
+                        ctx!.lineTo(this.size, this.size);
+                        ctx!.lineTo(-this.size, this.size);
+                        ctx!.closePath();
+                        ctx!.fill();
                         break;
 
                     case "cross":
-                        ctx.beginPath();
-                        ctx.moveTo(-this.size, 0);
-                        ctx.lineTo(this.size, 0);
-                        ctx.moveTo(0, -this.size);
-                        ctx.lineTo(0, this.size);
-                        ctx.stroke();
+                        ctx!.beginPath();
+                        ctx!.moveTo(-this.size, 0);
+                        ctx!.lineTo(this.size, 0);
+                        ctx!.moveTo(0, -this.size);
+                        ctx!.lineTo(0, this.size);
+                        ctx!.stroke();
                         break;
 
                     case "math":
-                        ctx.font = `${this.size * 2}px monospace`;
-                        ctx.textAlign = "center";
-                        ctx.textBaseline = "middle";
-                        ctx.fillText(this.equation, 0, 0);
+                        ctx!.font = `${this.size * 2}px monospace`;
+                        ctx!.textAlign = "center";
+                        ctx!.textBaseline = "middle";
+                        ctx!.fillText(this.equation, 0, 0);
                         break;
                 }
 
-                ctx.restore();
+                ctx!.restore();
             }
         }
 

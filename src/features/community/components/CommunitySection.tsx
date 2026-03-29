@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import CommunityCard from "@/features/community/components/CommunityCard";
 import { projects } from "@/features/community/data/projects";
 
@@ -11,7 +11,6 @@ export default function CommunitySection() {
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    whileOutOfView={{ opacity: 0, y: 60 }}
                     viewport={{ margin: "-80px" }}
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"

@@ -8,10 +8,8 @@ import "./globals.css";
 
 const cinzel = Cinzel({ subsets: ["latin"] });
 
-// Tipagem correta do metadata do Next.js
 export const metadata: Metadata = siteMetadata;
 
-// Tipagem do props (ESSENCIAL no TS)
 export default function RootLayout({
     children,
 }: {

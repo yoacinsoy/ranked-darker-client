@@ -3,10 +3,7 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import TechIcon from "@/features/deals/components/TechIcon";
-import {
-    POPULAR_TECH,
-    TECH_CATEGORIES,
-} from "@/features/deals/data/tech-stack";
+import { POPULAR_TECH, TECH_CATEGORIES, Tech } from "@/features/deals/data/tech-stack";
 
 export default function TechStack() {
     const [open, setOpen] = useState(false);
@@ -14,7 +11,7 @@ export default function TechStack() {
     return (
         <div className="mt-8">
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                {POPULAR_TECH.map((tech) => (
+                {POPULAR_TECH.map((tech: Tech) => (
                     <TechIcon key={tech} name={tech} />
                 ))}
             </div>
@@ -37,11 +34,9 @@ export default function TechStack() {
                 <div className="mt-6 space-y-6">
                     {Object.entries(TECH_CATEGORIES).map(([category, techs]) => (
                         <div key={category}>
-                            <h4 className="text-xs uppercase tracking-widest text-zinc-400 mb-3">
-                                {category}
-                            </h4>
+                            <h4 className="text-xs uppercase tracking-widest text-zinc-400 mb-3">{category}</h4>
                             <div className="flex flex-wrap gap-3">
-                                {techs.map((tech) => (
+                                {(techs as Tech[]).map((tech: Tech) => (
                                     <TechIcon key={tech} name={tech} />
                                 ))}
                             </div>
