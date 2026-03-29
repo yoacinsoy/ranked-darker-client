@@ -5,7 +5,8 @@ export default function BuildLink() {
         <Link
             href="/builds"
             className="
-                group relative
+                group relative inline-flex items-center
+
                 font-serif text-sm md:text-base
                 tracking-widest
 
@@ -19,6 +20,7 @@ export default function BuildLink() {
                 Forge Builds
             </span>
 
+            {/* Linha animada */}
             <span
                 className="
                     absolute left-0 -bottom-1
@@ -30,6 +32,7 @@ export default function BuildLink() {
                 "
             />
 
+            {/* Glow */}
             <span
                 className="
                     absolute inset-0

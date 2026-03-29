@@ -7,9 +7,8 @@ export default function Header() {
     return (
         <header
             className="
-                fixed top-0 w-full z-50
+                fixed top-0 w-full z-90
                 flex items-center justify-between
-
                 px-6 py-2
                 bg-[#0b0b0c]
                 border-b border-zinc-800
@@ -18,27 +17,20 @@ export default function Header() {
             {/* LEFT */}
             <div className="flex items-center gap-3">
                 <GithubLink />
-                <BrandTitle />
             </div>
 
             {/* CENTER */}
             <nav className="flex items-center gap-6">
+                <BrandTitle />
+            </nav>
+
+            {/* RIGHT */}
+            <div className="flex items-center gap-4">
                 <NavLink active>BUILD</NavLink>
                 <NavLink>COMMUNITY</NavLink>
                 <NavLink>MARKET</NavLink>
                 <NavLink>DEALS</NavLink>
                 <NavLink>MAPS</NavLink>
-                <NavLink>HISTORY</NavLink>
-            </nav>
-
-            {/* RIGHT */}
-            <div className="flex items-center gap-4">
-                <span className="text-xs text-red-400">❤ KO-FI</span>
-
-                <span className="text-xs text-indigo-400 cursor-pointer">
-                    JOIN DISCORD
-                </span>
-
                 <DiscordLink />
             </div>
         </header>

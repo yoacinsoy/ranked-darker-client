@@ -5,7 +5,8 @@ export default function CommunityLink() {
         <Link
             href="/community"
             className="
-                group relative
+                group relative inline-block
+
                 font-serif text-sm md:text-base
                 tracking-widest
 
@@ -15,26 +16,35 @@ export default function CommunityLink() {
                 hover:text-amber-200
             "
         >
-            <span className="relative z-10">
+            {/* Texto */}
+            <span className="relative z-10 inline-block">
                 Community
             </span>
 
+            {/* Linha rúnica */}
             <span
                 className="
-                    absolute left-0 -bottom-1
-                    h-[1px] w-0
+                    pointer-events-none
+                    absolute left-0 bottom-0
+
+                    h-[1px]
+                    w-full
+
+                    origin-left scale-x-0
                     bg-gradient-to-r from-transparent via-amber-500 to-transparent
 
-                    transition-all duration-300
-                    group-hover:w-full
+                    transition-transform duration-300 ease-out
+                    group-hover:scale-x-100
                 "
             />
 
+            {/* Glow */}
             <span
                 className="
+                    pointer-events-none
                     absolute inset-0
-                    opacity-0
-                    group-hover:opacity-100
+
+                    opacity-0 group-hover:opacity-100
 
                     bg-[radial-gradient(circle,rgba(255,140,0,0.15),transparent_70%)]
                     blur-md

@@ -19,6 +19,7 @@ export default function DiscordLink() {
                 hover:text-indigo-200
             "
         >
+            {/* Ícone */}
             <DiscordLogoIcon
                 className="
                     w-4 h-4
@@ -28,10 +29,12 @@ export default function DiscordLink() {
                 "
             />
 
+            {/* Texto */}
             <span className="relative z-10">
-                Join the Covenant
+                Discord
             </span>
 
+            {/* Linha animada */}
             <span
                 className="
                     absolute left-0 -bottom-1
@@ -43,6 +46,7 @@ export default function DiscordLink() {
                 "
             />
 
+            {/* Glow arcano */}
             <span
                 className="
                     absolute inset-0
