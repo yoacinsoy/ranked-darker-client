@@ -3,7 +3,6 @@ import { useEffect, RefObject } from "react";
 type Shape = "square" | "triangle" | "cross" | "math";
 
 const SHAPES: Shape[] = ["square", "triangle", "cross", "math"];
-
 const EQUATIONS = ["π", "∑", "√", "∞", "x²", "∫"];
 
 type ParticleType = {
@@ -22,18 +21,19 @@ type ParticleType = {
     draw: () => void;
 };
 
-export function useParticles(canvasRef: RefObject<HTMLCanvasElement>) {
+export function useParticles(canvasRef: RefObject<HTMLCanvasElement | null>) {
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const canvas = canvasRef.current!;
         if (!canvas) return;
 
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
 
         let particles: ParticleType[] = [];
-        let animationId: number;
+        let animationId: number | null = null;
 
         const resize = () => {
+            if (!canvas) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         };
@@ -81,46 +81,45 @@ export function useParticles(canvasRef: RefObject<HTMLCanvasElement>) {
             }
 
             draw() {
-                ctx!.save();
-                ctx!.globalAlpha = this.opacity;
-                ctx!.fillStyle = "white";
-                ctx!.strokeStyle = "white";
-                ctx!.lineWidth = 1.5;
-                ctx!.translate(this.x, this.y);
-                ctx!.rotate(this.rotation);
+                // Aqui garantimos que ctx nunca seja nulo usando assertion
+                const context = ctx!;
+                context.save();
+                context.globalAlpha = this.opacity;
+                context.fillStyle = "white";
+                context.strokeStyle = "white";
+                context.lineWidth = 1.5;
+                context.translate(this.x, this.y);
+                context.rotate(this.rotation);
 
                 switch (this.shape) {
                     case "square":
-                        ctx!.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+                        context.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
                         break;
-
                     case "triangle":
-                        ctx!.beginPath();
-                        ctx!.moveTo(0, -this.size);
-                        ctx!.lineTo(this.size, this.size);
-                        ctx!.lineTo(-this.size, this.size);
-                        ctx!.closePath();
-                        ctx!.fill();
+                        context.beginPath();
+                        context.moveTo(0, -this.size);
+                        context.lineTo(this.size, this.size);
+                        context.lineTo(-this.size, this.size);
+                        context.closePath();
+                        context.fill();
                         break;
-
                     case "cross":
-                        ctx!.beginPath();
-                        ctx!.moveTo(-this.size, 0);
-                        ctx!.lineTo(this.size, 0);
-                        ctx!.moveTo(0, -this.size);
-                        ctx!.lineTo(0, this.size);
-                        ctx!.stroke();
+                        context.beginPath();
+                        context.moveTo(-this.size, 0);
+                        context.lineTo(this.size, 0);
+                        context.moveTo(0, -this.size);
+                        context.lineTo(0, this.size);
+                        context.stroke();
                         break;
-
                     case "math":
-                        ctx!.font = `${this.size * 2}px monospace`;
-                        ctx!.textAlign = "center";
-                        ctx!.textBaseline = "middle";
-                        ctx!.fillText(this.equation, 0, 0);
+                        context.font = `${this.size * 2}px monospace`;
+                        context.textAlign = "center";
+                        context.textBaseline = "middle";
+                        context.fillText(this.equation, 0, 0);
                         break;
                 }
 
-                ctx!.restore();
+                context.restore();
             }
         }
 
@@ -140,19 +139,21 @@ export function useParticles(canvasRef: RefObject<HTMLCanvasElement>) {
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
                     if (dist < 120) {
-                        ctx!.beginPath();
-                        ctx!.strokeStyle = `rgba(59,130,246,${0.15 * (1 - dist / 120)})`;
-                        ctx!.lineWidth = 1;
-                        ctx!.moveTo(particles[a].x, particles[a].y);
-                        ctx!.lineTo(particles[b].x, particles[b].y);
-                        ctx!.stroke();
+                        const context = ctx!;
+                        context.beginPath();
+                        context.strokeStyle = `rgba(59,130,246,${0.15 * (1 - dist / 120)})`;
+                        context.lineWidth = 1;
+                        context.moveTo(particles[a].x, particles[a].y);
+                        context.lineTo(particles[b].x, particles[b].y);
+                        context.stroke();
                     }
                 }
             }
         };
 
         const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const context = ctx!;
+            context.clearRect(0, 0, canvas.width, canvas.height);
             for (const p of particles) {
                 p.update();
                 p.draw();
@@ -165,7 +166,7 @@ export function useParticles(canvasRef: RefObject<HTMLCanvasElement>) {
         animate();
 
         return () => {
-            cancelAnimationFrame(animationId);
+            if (animationId !== null) cancelAnimationFrame(animationId);
             window.removeEventListener("resize", resize);
         };
     }, [canvasRef]);

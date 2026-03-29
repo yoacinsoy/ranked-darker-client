@@ -1,12 +1,10 @@
 "use client";
 
-import { Moon, Sun, Terminal } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { useTerminalMode } from "@/shared/hooks/useTerminalMode";
 
 export default function DarkModeToggle() {
-    const { terminalMode, setTerminalMode } = useTerminalMode();
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -18,28 +16,6 @@ export default function DarkModeToggle() {
 
     return (
         <div className="flex items-center gap-4">
-            <button
-                type="button"
-                onClick={() => setTerminalMode(!terminalMode)}
-                aria-label={
-                    terminalMode ? "Disable terminal mode" : "Enable terminal mode"
-                }
-                aria-pressed={terminalMode}
-                className={`p-2 rounded-lg backdrop-blur-md hover:scale-110 transition-all duration-300 hidden sm:inline whitespace-nowrap
-    ${theme === "dark"
-                        ? "silver-glow bg-zinc-900"
-                        : "neon-light bg-zinc-700 border-none!"
-                    }`}
-            >
-                <Terminal
-                    aria-hidden="true"
-                    className={`w-5 h-5 transition-colors ${terminalMode
-                        ? "text-green-400"
-                        : "text-zinc-500 dark:text-zinc-400"
-                        }`}
-                />
-            </button>
-
             <button
                 type="button"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
