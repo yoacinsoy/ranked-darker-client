@@ -2,7 +2,6 @@ import React from "react";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { metadata as siteMetadata } from "@/config/metadata";
-import { TerminalModeProvider } from "@/shared/context/TerminalModeContext";
 import { Cinzel } from "next/font/google";
 
 import "./globals.css";
@@ -23,9 +22,8 @@ export default function RootLayout({
             <body
                 className={`${cinzel.className} text-zinc-700 dark:text-white min-h-screen flex flex-col`}
             >
-                <ThemeProvider attribute="class" defaultTheme="dark">
-                    <TerminalModeProvider>{children}</TerminalModeProvider>
-                </ThemeProvider>
+                <ThemeProvider attribute="class" defaultTheme="dark" />
+
             </body>
         </html>
     );

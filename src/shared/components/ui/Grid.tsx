@@ -1,12 +1,13 @@
-"use client";
+import type { ReactNode } from "react";
 
-export default function Grid({ children }) {
+interface GridProps {
+    children?: ReactNode;
+    className?: string;
+}
 
+export default function Grid({ children, className = "" }: GridProps) {
     return (
-        <div
-            aria-hidden="true"
-            className="fixed inset-0 grid-bg z-30"
-        >
+        <div className={`grid gap-4 ${className}`}>
             {children}
         </div>
     );
