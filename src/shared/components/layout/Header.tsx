@@ -45,19 +45,17 @@ export default function Header() {
                 border-b border-zinc-800
 
                 bg-[#0b0b0c]
-                bg-[url('/textures/Navbar-Background.png')]
+                bg-[url('/textures/navbar-texture.png')]
                 bg-repeat
                 bg-center
                 bg-cover
             "
         >
-            {/* ESQUERDA */}
             <div className="flex items-center justify-start">
 
-                {/* LOGO */}
                 <div className="flex items-center mr-4">
                     <Image
-                        src="/rdc-logo.png"
+                        src="/rdc-logo.svg"
                         alt="RDC Logo"
                         width={128}
                         height={128}
