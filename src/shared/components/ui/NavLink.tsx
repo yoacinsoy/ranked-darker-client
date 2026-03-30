@@ -16,7 +16,7 @@ export default function NavLink({ children, href }: Props) {
     return (
         <Link
             href={href}
-            className={`group relative flex items-center text-xs uppercase tracking-widest font-serif transition-all duration-300 ${active
+            className={`group relative flex items-center text-xs uppercase tracking-widest transition-all duration-300 ${active
                 ? "text-amber-400"
                 : "text-zinc-400 hover:text-amber-300"
                 }`}

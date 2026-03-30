@@ -3,6 +3,28 @@ import BrandTitle from "@/shared/components/ui/BrandTitle";
 import NavLink from "@/shared/components/ui/NavLink";
 import DiscordLink from "@/features/discord/DiscordButton";
 
+function Divider() {
+    return (
+        <div
+            className="
+                relative h-7 w-px mx-3
+
+                bg-gradient-to-b
+                from-transparent
+                via-amber-300
+                to-transparent
+
+                opacity-90
+
+                before:absolute before:inset-0
+                before:bg-amber-200/40
+                before:blur-[2px]
+                before:opacity-70
+            "
+        />
+    );
+}
+
 export default function Header() {
     return (
         <header
@@ -20,23 +42,25 @@ export default function Header() {
                 bg-cover
             "
         >
-            {/* LEFT */}
             <div className="flex items-center gap-3">
                 <GithubLink />
             </div>
 
-            {/* CENTER */}
             <nav className="flex items-center gap-6">
                 <BrandTitle />
             </nav>
 
-            {/* RIGHT */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
                 <NavLink href="/build">BUILD</NavLink>
+                <Divider />
                 <NavLink href="/community">COMMUNITY</NavLink>
+                <Divider />
                 <NavLink href="/market">MARKET</NavLink>
+                <Divider />
                 <NavLink href="/deals">DEALS</NavLink>
+                <Divider />
                 <NavLink href="/maps">MAPS</NavLink>
+                <Divider />
                 <DiscordLink />
             </div>
         </header>

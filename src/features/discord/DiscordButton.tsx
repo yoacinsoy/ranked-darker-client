@@ -9,7 +9,7 @@ export default function DiscordLink() {
             rel="noopener noreferrer"
             className="group relative flex items-center gap-2
 
-                font-serif text-sm md:text-base
+                text-sm md:text-base
                 tracking-widest
 
                 text-indigo-300/80
