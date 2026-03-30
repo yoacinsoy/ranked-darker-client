@@ -37,7 +37,7 @@ export default function Header() {
     return (
         <header
             className="fixed top-0 w-full z-90
-
+                select-none
                 grid grid-cols-3 items-center
 
                 px-6 py-4
@@ -61,7 +61,7 @@ export default function Header() {
                         alt="RDC Logo"
                         width={128}
                         height={128}
-                        className="object-contain"
+                        className="object-contain pointer-events-none"
                         priority
                     />
                 </div>
