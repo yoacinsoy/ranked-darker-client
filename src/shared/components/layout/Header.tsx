@@ -57,10 +57,10 @@ export default function Header() {
 
                 <div className="flex items-center mr-4">
                     <Image
-                        src="/logo.png"
+                        src="/rdc.png"
                         alt="RDC Logo"
-                        width={128}
-                        height={128}
+                        width={70}
+                        height={70}
                         className="object-contain pointer-events-none"
                         priority
                     />
