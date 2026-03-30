@@ -6,9 +6,9 @@ import DiscordLink from "@/features/discord/DiscordButton";
 
 import {
     Hammer,
-    Users,
+    Compass,
     ShoppingCart,
-    Tag,
+    Users2Icon as Users,
     Map,
 } from "lucide-react";
 
@@ -72,8 +72,8 @@ export default function Header() {
 
                 <Divider />
 
-                <NavLink href="/community" icon={<Users size={16} />}>
-                    COMMUNITY
+                <NavLink href="/quest" icon={<Compass size={16} />}>
+                    QUESTS
                 </NavLink>
             </div>
 
@@ -94,8 +94,8 @@ export default function Header() {
 
                 <Divider />
 
-                <NavLink href="/deals" icon={<Tag size={16} />}>
-                    DEALS
+                <NavLink href="/community" icon={<Users size={16} />}>
+                    FORUM
                 </NavLink>
 
                 <Divider />
