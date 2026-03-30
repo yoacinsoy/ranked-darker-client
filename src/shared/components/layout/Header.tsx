@@ -49,6 +49,8 @@ export default function Header() {
                 bg-repeat
                 bg-center
                 bg-cover
+
+                font-bold
             "
         >
             <div className="flex items-center justify-start">
