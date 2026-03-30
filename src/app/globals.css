@@ -17,27 +17,32 @@ body {
   font-family: var(--font-oxanium), sans-serif;
 }
 
-/* Enhanced smooth transitions for specific components */
+span:hover,
+a:hover,
+button:hover,
+[role="button"]:hover {
+  cursor:
+    url("/cursor-blue.webp") 4 4,
+    pointer !important;
+}
+
 .neon-light,
 .neon-dark {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-property: border-color, box-shadow, transform !important;
 }
 
-/* Smooth theme transitions */
 [data-theme="dark"] {
   transition:
     background-color 0.5s ease-in-out,
     color 0.5s ease-in-out !important;
 }
 
-/* Smooth sidebar animations */
 #social-icons,
 #slider-controls {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Smooth button hover effects */
 button {
   transition:
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -49,7 +54,6 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Smooth image transitions */
 img {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
@@ -58,18 +62,15 @@ img:hover {
   transform: scale(1.05);
 }
 
-/* Smooth text animations */
 .text-xs {
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Enhanced scroll snap for better UX */
 section {
   scroll-snap-align: start;
   scroll-margin-top: 2rem;
 }
 
-/* Smooth focus states */
 *:focus {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
@@ -346,12 +347,10 @@ section {
   background-repeat: repeat;
 }
 
-/* Estilo base do grimório */
 .grimoire-sidebar {
   border-left: 2px solid rgba(180, 140, 60, 0.6);
 }
 
-/* Link estilo medieval */
 .grimoire-link {
   letter-spacing: 0.05em;
   color: #d6c7a1;
@@ -365,7 +364,6 @@ section {
   transform: translateX(4px);
 }
 
-/* Separador estilo runa */
 .grimoire-separator {
   width: 1px;
   height: 60px;
@@ -377,12 +375,10 @@ section {
   );
 }
 
-/* glow estilo fogo/magia */
 .hover-glow:hover {
   filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.6));
 }
 
-/* animação de piscar (caso queira futuramente) */
 @keyframes blink {
   0%,
   100% {

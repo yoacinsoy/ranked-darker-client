@@ -57,7 +57,7 @@ export default function Header() {
 
                 <div className="flex items-center mr-4">
                     <Image
-                        src="/rdc-logo.svg"
+                        src="/logo.svg"
                         alt="RDC Logo"
                         width={128}
                         height={128}
