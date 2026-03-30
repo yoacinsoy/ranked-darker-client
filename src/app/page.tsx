@@ -1,6 +1,5 @@
 import Header from "@/shared/components/layout/Header";
 import Grid from "@/shared/components/ui/Grid";
-import ParticlesBackground from "@/shared/components/ui/ParticlesBackground";
 
 import Hero from "@/features/hero/components/Hero";
 import About from "@/features/build/components/BuildSection";
@@ -10,10 +9,9 @@ import Contact from "@/features/market/components/MarketSection";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-background font-sans overflow-x-hidden">
+        <div className="relative min-h-screen bg-background font-sans overflow-x-hidden">
             <Header />
             <Grid />
-            <ParticlesBackground />
 
             <section
                 id="home"

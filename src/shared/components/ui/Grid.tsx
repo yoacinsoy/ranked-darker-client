@@ -5,10 +5,15 @@ interface GridProps {
     className?: string;
 }
 
-export default function Grid({ children, className = "" }: GridProps) {
+export default function Grid() {
     return (
-        <div className={`grid gap-4 ${className}`}>
-            {children}
-        </div>
+        <div
+            className="
+                pointer-events-none
+                fixed inset-0
+                z-0
+                grid-bg
+            "
+        />
     );
 }

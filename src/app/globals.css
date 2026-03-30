@@ -160,26 +160,28 @@ section {
 }
 
 .grid-bg {
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    rgba(255, 255, 255, 0.18) 1px,
-    transparent 0
-  );
-  background-size: 24px 24px;
+  background-image:
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 0
+    ),
+    radial-gradient(
+      circle at 3px 3px,
+      rgba(251, 191, 36, 0.04) 1px,
+      transparent 0
+    );
+
+  background-size:
+    36px 36px,
+    72px 72px;
 
   mask-image: radial-gradient(
     circle at center,
-    black 20%,
-    rgba(0, 0, 0, 0.6) 50%,
-    transparent 90%
+    black 30%,
+    rgba(0, 0, 0, 0.4) 60%,
+    transparent 100%
   );
-  -webkit-mask-image: radial-gradient(
-    circle at center,
-    black 20%,
-    rgba(0, 0, 0, 0.6) 50%,
-    transparent 90%
-  );
-  cursor: grab;
 }
 
 .grid-bg:active {

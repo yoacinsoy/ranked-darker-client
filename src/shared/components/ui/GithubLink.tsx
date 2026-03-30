@@ -22,8 +22,7 @@ export default function GithubLink() {
                 bg-center
                 bg-contain
 
-                /* TEXTO */
-                font-serif tracking-wide
+                tracking-wide
                 text-[#fcfcc0]
 
                 transition-all duration-200
