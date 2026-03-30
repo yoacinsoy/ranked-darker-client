@@ -7,8 +7,7 @@ export default function DiscordLink() {
             href="https://discord.gg/seu-link"
             target="_blank"
             rel="noopener noreferrer"
-            className="
-                group relative flex items-center gap-2
+            className="group relative flex items-center gap-2
 
                 font-serif text-sm md:text-base
                 tracking-widest
@@ -21,8 +20,7 @@ export default function DiscordLink() {
         >
             {/* Ícone */}
             <DiscordLogoIcon
-                className="
-                    w-4 h-4
+                className="w-4 h-4
                     opacity-80
                     group-hover:opacity-100
                     transition
@@ -36,8 +34,7 @@ export default function DiscordLink() {
 
             {/* Linha animada */}
             <span
-                className="
-                    absolute left-0 -bottom-1
+                className="absolute left-0 -bottom-1
                     h-[1px] w-0
                     bg-gradient-to-r from-transparent via-indigo-400 to-transparent
 
@@ -48,8 +45,7 @@ export default function DiscordLink() {
 
             {/* Glow arcano */}
             <span
-                className="
-                    absolute inset-0
+                className="absolute inset-0
                     opacity-0 group-hover:opacity-100
 
                     bg-[radial-gradient(circle,rgba(99,102,241,0.2),transparent_70%)]

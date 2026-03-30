@@ -1,6 +1,6 @@
 export default function BrandTitle() {
     return (
-        <div className="relative flex items-center gap-3 overflow-hidden">
+        <div className="relative flex items-center gap-3 overflow-hidden ">
 
             <span
                 className="
@@ -8,7 +8,7 @@ export default function BrandTitle() {
                         bg-clip-text text-transparent text-2xl
                     "
             >
-                RANKED DARKER
+                RANKED DARKER CLIENT
             </span>
 
         </div>

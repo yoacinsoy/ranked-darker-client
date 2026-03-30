@@ -9,9 +9,15 @@ export default function Header() {
             className="
                 fixed top-0 w-full z-90
                 flex items-center justify-between
-                px-6 py-2
-                bg-[#0b0b0c]
+                px-6 py-4
+
                 border-b border-zinc-800
+
+                bg-[#0b0b0c]
+                bg-[url('/textures/Navbar-Background.png')]
+                bg-repeat
+                bg-center
+                bg-cover
             "
         >
             {/* LEFT */}
@@ -26,11 +32,11 @@ export default function Header() {
 
             {/* RIGHT */}
             <div className="flex items-center gap-4">
-                <NavLink active>BUILD</NavLink>
-                <NavLink>COMMUNITY</NavLink>
-                <NavLink>MARKET</NavLink>
-                <NavLink>DEALS</NavLink>
-                <NavLink>MAPS</NavLink>
+                <NavLink href="/build">BUILD</NavLink>
+                <NavLink href="/community">COMMUNITY</NavLink>
+                <NavLink href="/market">MARKET</NavLink>
+                <NavLink href="/deals">DEALS</NavLink>
+                <NavLink href="/maps">MAPS</NavLink>
                 <DiscordLink />
             </div>
         </header>
