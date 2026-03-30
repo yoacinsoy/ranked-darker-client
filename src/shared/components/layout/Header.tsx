@@ -45,7 +45,7 @@ export default function Header() {
                 border-b border-zinc-800
 
                 bg-[#0b0b0c]
-                bg-[url('/textures/Navbar-Background.svg')]
+                bg-[url('/textures/Navbar-Background.png')]
                 bg-repeat
                 bg-center
                 bg-cover

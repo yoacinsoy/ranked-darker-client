@@ -2,7 +2,6 @@ import React from "react";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { metadata as siteMetadata } from "@/config/metadata";
-import { Oxanium } from "next/font/google";
 
 import "./globals.css";
 
@@ -16,10 +15,15 @@ export default function RootLayout({
     return (
         <html lang="pt-BR" suppressHydrationWarning>
             <body
-                className={`text-zinc-700 dark:text-white min-h-screen flex flex-col`}
+                className="relative min-h-screen flex flex-col text-zinc-700 dark:text-white"
             >
+
+                <div className="fixed inset-0 z-0 bg-texture opacity-[0.02] " />
+
                 <ThemeProvider attribute="class" defaultTheme="dark">
-                    {children}
+                    <div className="relative z-10 flex flex-col min-h-screen">
+                        {children}
+                    </div>
                 </ThemeProvider>
             </body>
         </html>

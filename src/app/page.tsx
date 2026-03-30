@@ -9,9 +9,8 @@ import Contact from "@/features/market/components/MarketSection";
 
 export default function Home() {
     return (
-        <div className="relative min-h-screen bg-background font-sans overflow-x-hidden">
+        <div className="relative min-h-screen font-sans overflow-x-hidden">
             <Header />
-            <Grid />
 
             <section
                 id="home"

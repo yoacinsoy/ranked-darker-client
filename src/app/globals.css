@@ -337,3 +337,8 @@ section {
 .rune-divider {
   animation: runePulse 3s ease-in-out infinite;
 }
+
+.bg-texture {
+  background-image: url("/textures/background-texture.jpg");
+  background-repeat: repeat;
+}
