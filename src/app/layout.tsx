@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { metadata as siteMetadata } from "@/config/metadata";
+import AmbientSoundToggle from "@/shared/components/ui/AmbientSoundToggle";
 
 import "./globals.css";
 
@@ -19,7 +20,7 @@ export default function RootLayout({
             >
 
                 <div className="fixed inset-0 z-0 bg-texture opacity-[0.02] " />
-
+                <AmbientSoundToggle />
                 <ThemeProvider attribute="class" defaultTheme="dark">
                     <div className="relative z-10 flex flex-col min-h-screen">
                         {children}

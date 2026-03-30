@@ -342,3 +342,34 @@ section {
   background-image: url("/textures/background-texture.jpg");
   background-repeat: repeat;
 }
+
+/* Estilo base do grimório */
+.grimoire-sidebar {
+  border-left: 2px solid rgba(180, 140, 60, 0.6);
+}
+
+/* Link estilo medieval */
+.grimoire-link {
+  letter-spacing: 0.05em;
+  color: #d6c7a1;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.grimoire-link:hover {
+  color: #f5e6b3;
+  text-shadow: 0 0 6px rgba(255, 220, 120, 0.6);
+  transform: translateX(4px);
+}
+
+/* Separador estilo runa */
+.grimoire-separator {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(200, 160, 80, 0.5),
+    transparent
+  );
+}

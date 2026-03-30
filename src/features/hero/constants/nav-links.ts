@@ -1,49 +1,41 @@
-/** @type {import('@/types/nav.types').NavLink[]} */
-
 export const ROUTES = {
     home: "#home",
-    projects: "#projects",
-    about: "#architecture",
-    resume: "#stack",
-    works: "#lab",
+    maps: "#maps",
+    market: "#market",
+    builds: "#build",
+    community: "#community",
     contact: "#contact",
 };
 
 export const NAV_LINKS = [
     {
         id: "home",
-        label: ".is()",
-        terminalLabel: "whoami",
+        label: "Entrada",
         href: ROUTES.home,
     },
     {
-        id: "projects",
-        label: ".projects()",
-        terminalLabel: "ls projects",
-        href: ROUTES.projects,
+        id: "maps",
+        label: "Cartografia",
+        href: ROUTES.maps,
     },
     {
-        id: "about",
-        label: ".about()",
-        terminalLabel: "cat about.md",
-        href: ROUTES.about,
+        id: "market",
+        label: "Mercadores",
+        href: ROUTES.market,
     },
     {
-        id: "resume",
-        label: ".resume()",
-        terminalLabel: "cat resume.pdf",
-        href: ROUTES.resume,
+        id: "builds",
+        label: "Arquétipos",
+        href: ROUTES.builds,
     },
     {
-        id: "works",
-        label: ".works()",
-        terminalLabel: "ls works",
-        href: ROUTES.works,
+        id: "community",
+        label: "Clã",
+        href: ROUTES.community,
     },
     {
         id: "contact",
-        label: ".contact()",
-        terminalLabel: "ping contact",
+        label: "Mensagens",
         href: ROUTES.contact,
     },
 ];
