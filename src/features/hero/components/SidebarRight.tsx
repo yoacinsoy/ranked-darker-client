@@ -1,39 +1,47 @@
 "use client";
 
-import { CircleDot } from "lucide-react";
 import { useState } from "react";
 
-const indicators = ["/robin.png", "/hero-background.svg", "/yo.png"];
+const indicators = [
+    { label: "Nível Superior" },
+    { label: "Nível Intermediário" },
+    { label: "Nível Profundo" },
+];
 
 export default function SidebarRight() {
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [active, setActive] = useState(0);
 
     return (
-        <div
-            id="slider-controls"
-            className="absolute top-1/2 right-6 -translate-y-1/2 hidden sm:flex flex-col items-center gap-4 text-zinc-300 z-60"
-        >
-            <div className="my-2 h-6 w-px bg-white/30" />
+        <aside className="absolute top-1/2 right-12 -translate-y-1/2 hidden sm:flex flex-col items-center gap-4 text-zinc-300 z-60">
+            <div className="relative flex flex-col items-center gap-8 py-4">
 
-            {indicators.map((indicator, i) => (
-                <button
-                    key={indicator}
-                    type="button"
-                    onClick={() => setCurrentSlide(i)}
-                    aria-label={`Go to slide ${i + 1}`}
-                    aria-current={currentSlide === i ? "true" : undefined}
-                    className={`transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 ${currentSlide === i
-                            ? "scale-125 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
-                            : "text-zinc-400 hover:text-white"
-                        }`}
-                >
-                    <CircleDot
-                        className={`h-5 w-5 ${currentSlide === i ? "fill-white" : ""}`}
-                    />
-                </button>
-            ))}
+                <div className="absolute top-2 bottom-2 w-[1px] bg-stone-800 -z-10" />
 
-            <div className="my-2 h-6 w-px bg-white/30" />
-        </div>
+                {indicators.map((item, index) => {
+                    const isActive = active === index;
+
+                    return (
+                        <div
+                            key={index}
+                            title={item.label}
+                            onClick={() => setActive(index)}
+                            className="relative flex items-center justify-center cursor-pointer group"
+                        >
+                            {isActive ? (
+                                <>
+                                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div className="w-10 h-10 aspect-square rounded-full border border-orange-500/40 animate-ping" />
+                                    </div>
+
+                                    <div className="w-4 h-4 rotate-45 bg-orange-500 border border-orange-300 shadow-[0_0_10px_#f97316] relative z-10" />
+                                </>
+                            ) : (
+                                <div className="w-4 h-4 rotate-45 bg-stone-800 border border-stone-600 relative z-10" />
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        </aside>
     );
 }
