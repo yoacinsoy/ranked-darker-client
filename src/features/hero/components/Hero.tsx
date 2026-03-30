@@ -1,6 +1,6 @@
 import SidebarLeft from "@/features/hero/components/SidebarLeft";
 import SidebarRight from "@/features/hero/components/SidebarRight";
-
+import Image from "next/image";
 export default function Hero() {
     return (
         <section className="relative w-full min-h-screen flex items-center justify-center text-center px-4">
@@ -17,7 +17,14 @@ export default function Hero() {
 
                     <div className="flex items-center gap-6 mb-8 w-full justify-center">
                         <div className="relative w-20 h-20 rounded-full border-2 border-gold flex items-center justify-center bg-stone-950 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                            <i className="ph-fill ph-skull text-4xl text-parchment drop-shadow-md"></i>
+                            <Image
+                                src="/bosses/spectral-knight.png"
+                                alt="Hero Avatar"
+                                width={80}
+                                height={80}
+                                className="absolute inset-0 w-full h-full object-cover rounded-full"
+                            />
+
                             <div className="absolute -bottom-2 bg-darker border border-gold text-gold text-[0.6rem] font-bold px-2 py-0.5 rounded-sm font-mono tracking-widest">
                                 Nv.45
                             </div>
