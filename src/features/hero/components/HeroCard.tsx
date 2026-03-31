@@ -7,7 +7,7 @@ export default function HeroCard() {
             <div className="flex items-center gap-6 mb-8 w-full justify-center">
                 <div className="relative w-20 h-20 rounded-full border-2 border-gold flex items-center justify-center bg-stone-950 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                     <Image
-                        src="/bosses/fire-colossus.png"
+                        src="/bosses/lich.png"
                         alt="Cyclops Avatar"
                         width={80}
                         height={80}
