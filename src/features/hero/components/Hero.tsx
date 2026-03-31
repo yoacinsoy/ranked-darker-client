@@ -11,7 +11,7 @@ export default function Hero() {
 
             <SidebarLeft />
 
-            <section className="flex-1 flex flex-col justify-center items-center z-10 px-8 pb-12 pt-46 relative w-full max-w-3xl">
+            <section className="flex-1 flex flex-col justify-center items-center z-10 px-8 pb-12 pt-36 relative w-full max-w-3xl">
 
                 <div className="text-fire uppercase tracking-[0.4em] text-xs font-bold mb-4">
                     Temporada #8
