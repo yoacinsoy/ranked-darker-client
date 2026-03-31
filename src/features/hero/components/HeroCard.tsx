@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroCard() {
     return (
-        <div className="relative bg-stone-900/70 border border-stone-700/80 p-8 flex flex-col items-center backdrop-blur-md shadow-[0_0_40px_rgba(0,0,0,0.9)] w-full rounded-sm before:content-[''] before:absolute before:inset-0 before:border before:border-gold/10 before:scale-[0.98] pointer-events-auto transition-transform duration-500 hover:scale-[1.02]">
+        <div className="relative bg-stone-900/70 border border-stone-700/80 p-8 flex flex-col items-center backdrop-blur-md shadow-[0_0_40px_rgba(0,0,0,0.9)] w-full rounded-sm before:content-[''] before:absolute before:inset-0  before:scale-[0.98] pointer-events-auto transition-transform duration-500 hover:scale-[1.02]">
 
             <div className="flex items-center gap-6 mb-8 w-full justify-center">
                 <div className="relative w-20 h-20 rounded-full border-2 border-gold flex items-center justify-center bg-stone-950 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
