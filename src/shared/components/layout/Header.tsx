@@ -1,6 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import BrandTitle from "@/shared/components/ui/BrandTitle";
 import NavLink from "@/shared/components/ui/NavLink";
 import DiscordLink from "@/features/discord/DiscordButton";
 
@@ -14,47 +16,28 @@ import {
 
 function Divider() {
     return (
-        <div
-            className="relative h-7 w-px mx-3
-
-                bg-gradient-to-b
-                from-transparent
-                via-amber-300
-                to-transparent
-
-                opacity-90
-
-                before:absolute before:inset-0
-                before:bg-amber-200/40
-                before:blur-[2px]
-                before:opacity-70
-            "
-        />
+        <div className="relative h-7 w-px mx-3 bg-gradient-to-b from-transparent via-amber-300 to-transparent opacity-90 before:absolute before:inset-0 before:bg-amber-200/40 before:blur-[2px] before:opacity-70" />
     );
 }
 
 export default function Header() {
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const max = 200;
+            const value = Math.min(window.scrollY / max, 1);
+            setProgress(value);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <header
-            className="fixed top-0 w-full z-90
-                select-none
-                grid grid-cols-3 items-center
+        <header className="fixed top-0 w-full z-90 select-none grid grid-cols-3 items-center px-6 py-4 border-b border-zinc-800 bg-[#0b0b0c] bg-[url('/textures/navbar-texture.png')] bg-repeat bg-center bg-cover font-bold">
 
-                px-6 py-4
-
-                border-b border-zinc-800
-
-                bg-[#0b0b0c]
-                bg-[url('/textures/navbar-texture.png')]
-                bg-repeat
-                bg-center
-                bg-cover
-
-                font-bold
-            "
-        >
             <div className="flex items-center justify-start">
-
                 <div className="flex items-center mr-4">
                     <Image
                         src="/rdc.png"
@@ -77,12 +60,17 @@ export default function Header() {
                 </NavLink>
             </div>
 
-            <div className="flex justify-center">
-                <Image src="/brand-title.png"
+            <div className="flex justify-center relative">
+                <Image
+                    src="/brand-title.png"
                     alt="Title Background"
                     width={400}
                     height={100}
-                    className="absolute -top-2 left-1/2 -translate-x-1/2 "
+                    style={{
+                        transform: `translate(-50%, ${-8 - (progress * 32)}px) scale(${1 - progress * 0.1})`,
+                        opacity: 1 - progress * 0.2,
+                    }}
+                    className="absolute left-1/2 will-change-transform -top-10"
                     priority
                 />
             </div>
