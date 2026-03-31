@@ -67,10 +67,10 @@ export default function Header() {
                     width={400}
                     height={100}
                     style={{
-                        transform: `translate(-50%, ${-8 - (progress * 32)}px) scale(${1 - progress * 0.1})`,
+                        transform: `translate(-50%, ${-2 - (progress * 32)}px) scale(${1 - progress * 0.1})`,
                         opacity: 1 - progress * 0.2,
                     }}
-                    className="absolute left-1/2 will-change-transform -top-10"
+                    className="absolute left-1/2 will-change-transform -top-20"
                     priority
                 />
             </div>

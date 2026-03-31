@@ -12,11 +12,9 @@ export default function GithubLink() {
             className="
                 relative inline-flex items-center justify-center
 
-                /* TAMANHO BASEADO NA IMAGEM */
                 w-[260px]
                 aspect-[634/152]
 
-                /* IMAGEM DO BOTÃO */
                 bg-[url('/textures/Button-Yellow.png')]
                 bg-no-repeat
                 bg-center
