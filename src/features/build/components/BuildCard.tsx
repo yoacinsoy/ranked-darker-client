@@ -14,8 +14,7 @@ export default function BuildCard({ build }: Props) {
     return (
         <div
             onClick={() => setExpanded(!expanded)}
-            className="
-                relative w-full aspect-[634/152]
+            className="relative w-full aspect-[634/152]
                 bg-[url('/textures/Button.png')]
                 bg-no-repeat bg-center bg-contain
                 cursor-pointer
@@ -24,54 +23,30 @@ export default function BuildCard({ build }: Props) {
             "
         >
             <div
-                className="
-                    absolute left-5 top-1/2 -translate-y-1/2
+                className="absolute left-5 top-1/2 -translate-y-1/2
                     w-[60px] h-[60px]
-
-
                     bg-zinc-800
                     border border-zinc-700
-
                     shadow-inner
                     shadow-black/80
                 "
             >
-                <div
-                    className="
-                        relative w-full h-full
-                        bg-zinc-900
-                        overflow-hidden
-
-                        border border-zinc-700
-                    "
+                <div className="relative w-full h-full bg-zinc-900 overflow-hidden border border-zinc-700"
                 >
                     <Image
                         src={build.image}
                         alt={build.title}
                         fill
                         sizes="80px"
-                        className="
-                            object-cover
-                            contrast-90
-                            saturate-75
-                        "
+                        className="object-cover contrast-90 saturate-75"
                         priority
                     />
 
-                    <div
-                        className="
-                            absolute inset-0
-                            bg-gradient-to-b
-                            from-black/40
-                            via-transparent
-                            to-black/30
-                            pointer-events-none
-                        "
-                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30 pointer-events-none" />
                 </div>
             </div>
 
-            <div className="ml-[120px] pr-4 flex flex-col justify-center h-full z-10">
+            <div className="ml-[100px] pr-4 flex flex-col justify-center h-full z-10">
                 <h3 className="text-sm font-bold uppercase text-[#d6d3b1]">
                     {build.title}
                 </h3>
