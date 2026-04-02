@@ -10,6 +10,7 @@ type Props = {
 
 export default function BuildCard({ build }: Props) {
     const [expanded, setExpanded] = useState(false);
+    const perkIconSrc = build.perks[0]?.image ?? build.image;
 
     return (
         <div
@@ -33,35 +34,8 @@ export default function BuildCard({ build }: Props) {
                 </div>
             </div>
 
-            <div className="ml-[100px] pr-4 flex flex-col justify-center h-full z-10">
-                <h3 className="text-sm font-bold uppercase text-[#d6d3b1]">
-                    {build.title}
-                </h3>
-
-                {!expanded && (
-                    <p className="text-xs text-zinc-400 mt-1">
-                        {build.class}
-                    </p>
-                )}
-
-                {expanded && (
-                    <div className="mt-2 text-[10px] text-zinc-400 space-y-1">
-                        <div>
-                            <span className="text-zinc-300">Perks:</span>{" "}
-                            {build.perks.join(", ")}
-                        </div>
-
-                        <div>
-                            <span className="text-zinc-300">Skills:</span>{" "}
-                            {build.skills.join(", ")}
-                        </div>
-
-                        <div>
-                            <span className="text-zinc-300">Spells:</span>{" "}
-                            {build.spells.join(", ")}
-                        </div>
-                    </div>
-                )}
+            <div className="ml-[100px] pr-4 flex flex-col justify-center h-full z-10 align-middle my-auto">
+                <Image src={perkIconSrc} alt={build.class} width={60} height={60} className="mb-1" />
             </div>
         </div>
     );

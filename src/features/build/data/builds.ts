@@ -9,13 +9,13 @@ export const builds: Build[] = [
         image: "/classes/fighter.png",
         stats: { strength: 15, agility: 8, will: 5 },
         perks: [
-            { name: "Defense Mastery", image: "classes/perks/defense-mastery.png", highlight: true },
-            { name: "Shield Expert", image: "classes/perks/shield-expert.png" }, // Melhora a velocidade de bloqueio.
-            { name: "Swift", image: "classes/perks/swift.png" } // Essencial para reduzir penalidade de movimento da placa.
+            { name: "Defense Mastery", image: "/classes/perks/fighter/defense-mastery.png", highlight: true },
+            { name: "Shield Expert", image: "/classes/perks/fighter/shield-expert.png" }, // Melhora a velocidade de bloqueio.
+            { name: "Swift", image: "/classes/perks/fighter/swift.png" } // Essencial para reduzir penalidade de movimento da placa.
         ],
         skills: [
-            { name: "Second Wind", image: "classes/skills/second-wind.png", highlight: true }, // Cura essencial para solo.
-            { name: "Sprint", image: "classes/skills/sprint.png" } // Vital para fechar distância contra Rangers.
+            { name: "Second Wind", image: "/classes/skills/second-wind.png", highlight: true }, // Cura essencial para solo.
+            { name: "Sprint", image: "/classes/skills/sprint.png" } // Vital para fechar distância contra Rangers.
         ],
         spells: [],
     },
@@ -27,12 +27,12 @@ export const builds: Build[] = [
         image: "/classes/ranger.png",
         stats: { strength: 10, agility: 15, will: 5 },
         perks: [
-            { name: "Sharpshooter", image: "classes/perks/sharpshooter.png", highlight: true },
-            { name: "Nimble Hands", image: "classes/perks/nimble-hands.png" } // Aumenta a cadência de tiro.
+            { name: "Sharpshooter", image: "/classes/perks/ranger/sharpshooter.png", highlight: true },
+            { name: "Nimble Hands", image: "/classes/perks/ranger/nimble-hands.png" } // Aumenta a cadência de tiro.
         ],
         skills: [
-            { name: "Quick Shot", image: "classes/skills/quick-shot.png", highlight: true }, // Dispara múltiplas flechas rapidamente.
-            { name: "Field Provisions", image: "classes/skills/field-provisions.png" } // Cura baseada em comida.
+            { name: "Quick Shot", image: "/classes/skills/ranger/quick-shot.png", highlight: true }, // Dispara múltiplas flechas rapidamente.
+            { name: "Field Provisions", image: "/classes/skills/ranger/field-provisions.png" } // Cura baseada em comida.
         ],
         spells: [],
     },
@@ -44,12 +44,12 @@ export const builds: Build[] = [
         image: "/classes/rogue.png",
         stats: { strength: 8, agility: 15, will: 5 },
         perks: [
-            { name: "Poisoned Weapon", image: "classes/perks/poisoned-weapon.png", highlight: true },
-            { name: "Stealth", image: "classes/perks/stealth.png" } // Permite mover-se invisível.
+            { name: "Poisoned Weapon", image: "/classes/perks/rogue/poisoned-weapon.png", highlight: true },
+            { name: "Stealth", image: "/classes/perks/rogue/stealth.png" } // Permite mover-se invisível.
         ],
         skills: [
-            { name: "Hide", image: "classes/skills/hide.png", highlight: true },
-            { name: "Rupture", image: "classes/skills/rupture.png" } // Dano de sangramento adicional.
+            { name: "Hide", image: "/classes/skills/rogue/hide.png", highlight: true },
+            { name: "Rupture", image: "/classes/skills/rogue/rupture.png" } // Dano de sangramento adicional.
         ],
         spells: [],
     },
@@ -61,8 +61,8 @@ export const builds: Build[] = [
         image: "/classes/wizard.png",
         stats: { strength: 5, agility: 7, will: 15 },
         perks: [
-            { name: "Sage", image: "classes/perks/sage.png", highlight: true },
-            { name: "Quick Chant", image: "classes/perks/quick-chant.png" }
+            { name: "Sage", image: "/classes/perks/wizard/sage.png", highlight: true },
+            { name: "Quick Chant", image: "/classes/perks/wizard/quick-chant.png" }
         ],
         skills: [
             { name: "Spell Memory", highlight: true },
@@ -81,10 +81,10 @@ export const builds: Build[] = [
         image: "/classes/sorcerer.png",
         stats: { strength: 5, agility: 8, will: 17 },
         perks: [
-            { name: "Mana Flow", highlight: true }
+            { name: "Mana Flow", image: "/classes/perks/warlock/vampirism.png", highlight: true }
         ],
         skills: [
-            { name: "Elemental Overload" }
+            { name: "Elemental Overload", image: "/classes/skills/warlock/malice.png" }
         ],
         spells: [], // Detalhes de feitiços específicos variam conforme atualizações recentes [5, 6].
     },
@@ -96,12 +96,12 @@ export const builds: Build[] = [
         image: "/classes/cleric.png",
         stats: { strength: 12, agility: 5, will: 15 },
         perks: [
-            { name: "Undead Slaying", highlight: true },
-            { name: "Advanced Healer" }
+            { name: "Undead Slaying", image: "/classes/perks/cleric/undead-slaying.png", highlight: true },
+            { name: "Advanced Healer", image: "/classes/perks/cleric/advanced-healer.png" } // Aumenta a eficácia de cura.
         ],
         skills: [
-            { name: "Holy Light" },
-            { name: "Resurrection" }
+            { name: "Holy Light", image: "/classes/skills/cleric/holy-light.png" },
+            { name: "Resurrection", image: "/classes/skills/cleric/resurrection.png" }
         ],
         spells: [
             { name: "Lesser Heal" },
