@@ -19,7 +19,7 @@ export default function BuildCard({ build }: Props) {
             style={{ aspectRatio: expanded ? 'auto' : '634/152' }}
         >
             <div className="p-6">
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-2">
                     <div className="relative w-[60px] h-[60px] bg-zinc-800 border border-zinc-700 shadow-inner shadow-black/80 flex-shrink-0">
                         <div className="relative w-full h-full bg-zinc-900 overflow-hidden border border-zinc-700">
                             <Image
@@ -35,8 +35,7 @@ export default function BuildCard({ build }: Props) {
                     </div>
 
                     <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-1">{build.title}</h3>
-                        <p className="text-sm text-gray-400">{build.class}</p>
+                        <h3 className="text-xl font-bold text-white mb-4">{build.class}</h3>
                     </div>
 
                     <Image
@@ -48,7 +47,7 @@ export default function BuildCard({ build }: Props) {
                     />
                 </div>
 
-                <p className="text-gray-300 text-sm mb-4">{build.description}</p>
+                <p className="text-gray-500 text-sm mb-12">{build.description}</p>
 
                 {expanded && (
                     <div className="mt-4 pt-4 border-t border-zinc-700">

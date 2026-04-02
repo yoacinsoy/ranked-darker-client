@@ -13,8 +13,6 @@ export const builds: Build[] = [
             { name: "Shield Mastery", image: "/classes/perks/fighter/shield-mastery.png" },
             { name: "Swift", image: "/classes/perks/fighter/swift.png" },
             { name: "Weapon Mastery", image: "/classes/perks/fighter/weapon-mastery.png" },
-            { name: "Veteran Instinct", image: "/classes/perks/fighter/veteran-instinct.png" },
-            { name: "Last Bastion", image: "/classes/perks/fighter/last-bastion.png" },
         ],
         skills: [
             { name: "Second Wind", image: "/classes/skills/second-wind.png", highlight: true },
@@ -34,8 +32,6 @@ export const builds: Build[] = [
             { name: "Two Hander", image: "/classes/perks/barbarian/two-hander.png" },
             { name: "Axe Specialization", image: "/classes/perks/barbarian/axe-specialization.png" },
             { name: "Iron Will", image: "/classes/perks/barbarian/iron-will.png" },
-            { name: "Savage", image: "/classes/perks/barbarian/savage.png" },
-            { name: "Executioner", image: "/classes/perks/barbarian/executioner.png" },
         ],
         skills: [
             { name: "Whirlwind", image: "/classes/skills/barbarian/whirlwind.png", highlight: true },
@@ -55,8 +51,6 @@ export const builds: Build[] = [
             { name: "Stealth", image: "/classes/perks/rogue/stealth.png" },
             { name: "Back Attack", image: "/classes/perks/rogue/back-attack.png" },
             { name: "Dagger Mastery", image: "/classes/perks/rogue/dagger-mastery.png" },
-            { name: "Ambush", image: "/classes/perks/rogue/ambush.png" },
-            { name: "Double Jump", image: "/classes/perks/rogue/double-jump.png" },
         ],
         skills: [
             { name: "Hide", image: "/classes/skills/rogue/hide.png", highlight: true },
@@ -76,8 +70,6 @@ export const builds: Build[] = [
             { name: "Nimble Hands", image: "/classes/perks/ranger/nimble-hands.png" },
             { name: "Quick Reload", image: "/classes/perks/ranger/quick-reload.png" },
             { name: "Ranged Weapon Mastery", image: "/classes/perks/ranger/ranged-weapon-mastery.png" },
-            { name: "Camping Mastery", image: "/classes/perks/ranger/camping-mastery.png" },
-            { name: "Trap Mastery", image: "/classes/perks/ranger/trap-mastery.png" },
         ],
         skills: [
             { name: "Quick Shot", image: "/classes/skills/ranger/quick-shot.png", highlight: true },
@@ -97,8 +89,6 @@ export const builds: Build[] = [
             { name: "Quick Chant", image: "/classes/perks/wizard/quick-chant.png" },
             { name: "Arcane Mastery", image: "/classes/perks/wizard/arcane-mastery.png" },
             { name: "Fire Mastery", image: "/classes/perks/wizard/fire-mastery.png" },
-            { name: "Ice Mastery", image: "/classes/perks/wizard/ice-mastery.png" },
-            { name: "Spell Overload", image: "/classes/perks/wizard/spell-overload.png" },
         ],
         skills: [
             { name: "Spell Memory", highlight: true },
@@ -121,8 +111,6 @@ export const builds: Build[] = [
             { name: "Advanced Healer", image: "/classes/perks/cleric/advanced-healer.png" },
             { name: "Holy Aura", image: "/classes/perks/cleric/holy-aura.png" },
             { name: "Protection from Evil", image: "/classes/perks/cleric/protection-from-evi.png" },
-            { name: "Blunt Weapon Mastery", image: "/classes/perks/cleric/blunt-weapon-mastery.png" },
-            { name: "Holy Water", image: "/classes/perks/cleric/holy-water.png" },
         ],
         skills: [
             { name: "Holy Light", image: "/classes/skills/cleric/holy-light.png" },
@@ -145,8 +133,6 @@ export const builds: Build[] = [
             { name: "War Song", image: "/classes/perks/bard/war-song.png" },
             { name: "Melodic Protection", image: "/classes/perks/bard/melodic-protection.png" },
             { name: "Rapier Mastery", image: "/classes/perks/bard/rapier-mastery.png" },
-            { name: "Story Teller", image: "/classes/perks/bard/story-teller.png" },
-            { name: "Jolly Time", image: "/classes/perks/bard/jolly-time.png" },
         ],
         skills: [
             { name: "Inspiring Melody", image: "/classes/skills/bard/inspiring-melody.png", highlight: true },
@@ -166,8 +152,6 @@ export const builds: Build[] = [
             { name: "Dark Enhancement", image: "/classes/perks/warlock/dark-enhancement.png" },
             { name: "Vampirism", image: "/classes/perks/warlock/vampirism.png" },
             { name: "Demon Armor", image: "/classes/perks/warlock/demon-armor.png" },
-            { name: "Soul Collector", image: "/classes/perks/warlock/soul-collector.png" },
-            { name: "Shadow Touch", image: "/classes/perks/warlock/shadow-touch.png" },
         ],
         skills: [
             { name: "Dark Pact", image: "/classes/skills/warlock/dark-pact.png", highlight: true },
@@ -187,8 +171,6 @@ export const builds: Build[] = [
             { name: "Spirit Magic Mastery", image: "/classes/perks/druid/spirit-magic-mastery.png" },
             { name: "Natural Healing", image: "/classes/perks/druid/natural-healing.png" },
             { name: "Thorn Coat", image: "/classes/perks/druid/thorn-coat.png" },
-            { name: "Spirit Bond", image: "/classes/perks/druid/spirit-bond.png" },
-            { name: "Sun and Moon", image: "/classes/perks/druid/sun-and-moon.png" },
         ],
         skills: [
             { name: "Bear Form", image: "/classes/skills/druid/bear-form.png", highlight: true },
