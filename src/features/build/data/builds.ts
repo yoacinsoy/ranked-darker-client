@@ -10,29 +10,36 @@ export const builds: Build[] = [
         stats: { strength: 15, agility: 8, will: 5 },
         perks: [
             { name: "Defense Mastery", image: "/classes/perks/fighter/defense-mastery.png", highlight: true },
-            { name: "Shield Expert", image: "/classes/perks/fighter/shield-expert.png" }, // Melhora a velocidade de bloqueio.
-            { name: "Swift", image: "/classes/perks/fighter/swift.png" } // Essencial para reduzir penalidade de movimento da placa.
+            { name: "Shield Mastery", image: "/classes/perks/fighter/shield-mastery.png" },
+            { name: "Swift", image: "/classes/perks/fighter/swift.png" },
+            { name: "Weapon Mastery", image: "/classes/perks/fighter/weapon-mastery.png" },
+            { name: "Veteran Instinct", image: "/classes/perks/fighter/veteran-instinct.png" },
+            { name: "Last Bastion", image: "/classes/perks/fighter/last-bastion.png" },
         ],
         skills: [
-            { name: "Second Wind", image: "/classes/skills/second-wind.png", highlight: true }, // Cura essencial para solo.
-            { name: "Sprint", image: "/classes/skills/sprint.png" } // Vital para fechar distância contra Rangers.
+            { name: "Second Wind", image: "/classes/skills/second-wind.png", highlight: true },
+            { name: "Sprint", image: "/classes/skills/sprint.png" },
         ],
         spells: [],
     },
     {
-        id: "ranger-1",
-        class: "Ranger",
-        title: "Sharpshooter",
-        description: "Especialista em combate à distância; utiliza arcos e armadilhas para controlar o cenário [1, 3].",
-        image: "/classes/ranger.png",
-        stats: { strength: 10, agility: 15, will: 5 },
+        id: "barbarian-1",
+        class: "Barbarian",
+        title: "Berserker",
+        description: "Dano bruto e sustentação através de fúria; usa armas de duas mãos e armaduras médias [1, 3].",
+        image: "/classes/barbarian.png",
+        stats: { strength: 17, agility: 6, will: 5 },
         perks: [
-            { name: "Sharpshooter", image: "/classes/perks/ranger/sharpshooter.png", highlight: true },
-            { name: "Nimble Hands", image: "/classes/perks/ranger/nimble-hands.png" } // Aumenta a cadência de tiro.
+            { name: "Berserker", image: "/classes/perks/barbarian/berserker.png", highlight: true },
+            { name: "Two Hander", image: "/classes/perks/barbarian/two-hander.png" },
+            { name: "Axe Specialization", image: "/classes/perks/barbarian/axe-specialization.png" },
+            { name: "Iron Will", image: "/classes/perks/barbarian/iron-will.png" },
+            { name: "Savage", image: "/classes/perks/barbarian/savage.png" },
+            { name: "Executioner", image: "/classes/perks/barbarian/executioner.png" },
         ],
         skills: [
-            { name: "Quick Shot", image: "/classes/skills/ranger/quick-shot.png", highlight: true }, // Dispara múltiplas flechas rapidamente.
-            { name: "Field Provisions", image: "/classes/skills/ranger/field-provisions.png" } // Cura baseada em comida.
+            { name: "Whirlwind", image: "/classes/skills/barbarian/whirlwind.png", highlight: true },
+            { name: "War Cry", image: "/classes/skills/barbarian/war-cry.png" },
         ],
         spells: [],
     },
@@ -45,11 +52,36 @@ export const builds: Build[] = [
         stats: { strength: 8, agility: 15, will: 5 },
         perks: [
             { name: "Poisoned Weapon", image: "/classes/perks/rogue/poisoned-weapon.png", highlight: true },
-            { name: "Stealth", image: "/classes/perks/rogue/stealth.png" } // Permite mover-se invisível.
+            { name: "Stealth", image: "/classes/perks/rogue/stealth.png" },
+            { name: "Back Attack", image: "/classes/perks/rogue/back-attack.png" },
+            { name: "Dagger Mastery", image: "/classes/perks/rogue/dagger-mastery.png" },
+            { name: "Ambush", image: "/classes/perks/rogue/ambush.png" },
+            { name: "Double Jump", image: "/classes/perks/rogue/double-jump.png" },
         ],
         skills: [
             { name: "Hide", image: "/classes/skills/rogue/hide.png", highlight: true },
-            { name: "Rupture", image: "/classes/skills/rogue/rupture.png" } // Dano de sangramento adicional.
+            { name: "Rupture", image: "/classes/skills/rogue/rupture.png" },
+        ],
+        spells: [],
+    },
+    {
+        id: "ranger-1",
+        class: "Ranger",
+        title: "Sharpshooter",
+        description: "Especialista em combate à distância; utiliza arcos e armadilhas para controlar o cenário [1, 3].",
+        image: "/classes/ranger.png",
+        stats: { strength: 10, agility: 15, will: 5 },
+        perks: [
+            { name: "Sharpshooter", image: "/classes/perks/ranger/sharpshooter.png", highlight: true },
+            { name: "Nimble Hands", image: "/classes/perks/ranger/nimble-hands.png" },
+            { name: "Quick Reload", image: "/classes/perks/ranger/quick-reload.png" },
+            { name: "Ranged Weapon Mastery", image: "/classes/perks/ranger/ranged-weapon-mastery.png" },
+            { name: "Camping Mastery", image: "/classes/perks/ranger/camping-mastery.png" },
+            { name: "Trap Mastery", image: "/classes/perks/ranger/trap-mastery.png" },
+        ],
+        skills: [
+            { name: "Quick Shot", image: "/classes/skills/ranger/quick-shot.png", highlight: true },
+            { name: "Field Provisions", image: "/classes/skills/ranger/field-provisions.png" },
         ],
         spells: [],
     },
@@ -62,31 +94,20 @@ export const builds: Build[] = [
         stats: { strength: 5, agility: 7, will: 15 },
         perks: [
             { name: "Sage", image: "/classes/perks/wizard/sage.png", highlight: true },
-            { name: "Quick Chant", image: "/classes/perks/wizard/quick-chant.png" }
+            { name: "Quick Chant", image: "/classes/perks/wizard/quick-chant.png" },
+            { name: "Arcane Mastery", image: "/classes/perks/wizard/arcane-mastery.png" },
+            { name: "Fire Mastery", image: "/classes/perks/wizard/fire-mastery.png" },
+            { name: "Ice Mastery", image: "/classes/perks/wizard/ice-mastery.png" },
+            { name: "Spell Overload", image: "/classes/perks/wizard/spell-overload.png" },
         ],
         skills: [
             { name: "Spell Memory", highlight: true },
-            { name: "Meditation" } // Recupera feitiços usados.
+            { name: "Meditation" },
         ],
         spells: [
             { name: "Fireball" },
-            { name: "Invisibility" }
+            { name: "Invisibility" },
         ],
-    },
-    {
-        id: "sorcerer-1",
-        class: "Sorcerer",
-        title: "Elemental Catalyst",
-        description: "Nova classe focada em magia elemental e manipulação direta de energia [5].",
-        image: "/classes/sorcerer.png",
-        stats: { strength: 5, agility: 8, will: 17 },
-        perks: [
-            { name: "Mana Flow", image: "/classes/perks/warlock/vampirism.png", highlight: true }
-        ],
-        skills: [
-            { name: "Elemental Overload", image: "/classes/skills/warlock/malice.png" }
-        ],
-        spells: [], // Detalhes de feitiços específicos variam conforme atualizações recentes [5, 6].
     },
     {
         id: "cleric-1",
@@ -97,15 +118,82 @@ export const builds: Build[] = [
         stats: { strength: 12, agility: 5, will: 15 },
         perks: [
             { name: "Undead Slaying", image: "/classes/perks/cleric/undead-slaying.png", highlight: true },
-            { name: "Advanced Healer", image: "/classes/perks/cleric/advanced-healer.png" } // Aumenta a eficácia de cura.
+            { name: "Advanced Healer", image: "/classes/perks/cleric/advanced-healer.png" },
+            { name: "Holy Aura", image: "/classes/perks/cleric/holy-aura.png" },
+            { name: "Protection from Evil", image: "/classes/perks/cleric/protection-from-evi.png" },
+            { name: "Blunt Weapon Mastery", image: "/classes/perks/cleric/blunt-weapon-mastery.png" },
+            { name: "Holy Water", image: "/classes/perks/cleric/holy-water.png" },
         ],
         skills: [
             { name: "Holy Light", image: "/classes/skills/cleric/holy-light.png" },
-            { name: "Resurrection", image: "/classes/skills/cleric/resurrection.png" }
+            { name: "Resurrection", image: "/classes/skills/cleric/resurrection.png" },
         ],
         spells: [
             { name: "Lesser Heal" },
-            { name: "Holy Strike" }
+            { name: "Holy Strike" },
         ],
-    }
+    },
+    {
+        id: "bard-1",
+        class: "Bard",
+        title: "War Singer",
+        description: "Suporte versátil com buffs musicais e controle de grupo; usa instrumentos e rapieiras [2, 4].",
+        image: "/classes/bard.png",
+        stats: { strength: 8, agility: 12, will: 12 },
+        perks: [
+            { name: "Charismatic Performance", image: "/classes/perks/bard/charismatic-performance.png", highlight: true },
+            { name: "War Song", image: "/classes/perks/bard/war-song.png" },
+            { name: "Melodic Protection", image: "/classes/perks/bard/melodic-protection.png" },
+            { name: "Rapier Mastery", image: "/classes/perks/bard/rapier-mastery.png" },
+            { name: "Story Teller", image: "/classes/perks/bard/story-teller.png" },
+            { name: "Jolly Time", image: "/classes/perks/bard/jolly-time.png" },
+        ],
+        skills: [
+            { name: "Inspiring Melody", image: "/classes/skills/bard/inspiring-melody.png", highlight: true },
+            { name: "Dissonance", image: "/classes/skills/bard/dissonance.png" },
+        ],
+        spells: [],
+    },
+    {
+        id: "warlock-1",
+        class: "Warlock",
+        title: "Dark Pact",
+        description: "Dano sombrio e maldições; usa magia de escuridão e pactos demoníacos [3, 5].",
+        image: "/classes/warlock.png",
+        stats: { strength: 5, agility: 8, will: 17 },
+        perks: [
+            { name: "Curse Mastery", image: "/classes/perks/warlock/curse-mastery.png", highlight: true },
+            { name: "Dark Enhancement", image: "/classes/perks/warlock/dark-enhancement.png" },
+            { name: "Vampirism", image: "/classes/perks/warlock/vampirism.png" },
+            { name: "Demon Armor", image: "/classes/perks/warlock/demon-armor.png" },
+            { name: "Soul Collector", image: "/classes/perks/warlock/soul-collector.png" },
+            { name: "Shadow Touch", image: "/classes/perks/warlock/shadow-touch.png" },
+        ],
+        skills: [
+            { name: "Dark Pact", image: "/classes/skills/warlock/dark-pact.png", highlight: true },
+            { name: "Soul Drain", image: "/classes/skills/warlock/soul-drain.png" },
+        ],
+        spells: [],
+    },
+    {
+        id: "druid-1",
+        class: "Druid",
+        title: "Nature's Wrath",
+        description: "Magia natural e cura; usa poderes da natureza e transformação animal [2, 4].",
+        image: "/classes/druid.png",
+        stats: { strength: 8, agility: 8, will: 16 },
+        perks: [
+            { name: "Shapeshift Mastery", image: "/classes/perks/druid/shapeshift-mastery.png", highlight: true },
+            { name: "Spirit Magic Mastery", image: "/classes/perks/druid/spirit-magic-mastery.png" },
+            { name: "Natural Healing", image: "/classes/perks/druid/natural-healing.png" },
+            { name: "Thorn Coat", image: "/classes/perks/druid/thorn-coat.png" },
+            { name: "Spirit Bond", image: "/classes/perks/druid/spirit-bond.png" },
+            { name: "Sun and Moon", image: "/classes/perks/druid/sun-and-moon.png" },
+        ],
+        skills: [
+            { name: "Bear Form", image: "/classes/skills/druid/bear-form.png", highlight: true },
+            { name: "Entangling Roots", image: "/classes/skills/druid/entangling-roots.png" },
+        ],
+        spells: [],
+    },
 ];
