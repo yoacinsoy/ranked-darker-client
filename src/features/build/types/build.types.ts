@@ -3,6 +3,7 @@ export type BuildItem = {
     description?: string;
     icon?: string;
     highlight?: boolean;
+    image?: string;
 };
 
 export type Build = {
