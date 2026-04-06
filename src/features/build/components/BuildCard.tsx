@@ -30,22 +30,18 @@ interface SkillItemProps {
 
 const SkillItem: FC<SkillItemProps> = ({ skill, index }) => (
     <div
-        className={`flex items-center gap-2 p-2 rounded-lg ${skill.highlight
-            ? 'bg-amber-900/30 border border-amber-700/50'
-            : 'bg-zinc-800/50 border border-zinc-700/50'
-            }`}
+        className={`flex items-center rounded-lg`}
     >
         {skill.image && (
-            <div className="relative w-8 h-8 flex-shrink-0">
+            <div className="relative w-12 h-12 shrink-0">
                 <Image
                     src={skill.image}
                     alt={skill.name}
                     fill
-                    className="object-cover rounded"
+                    className="object-cover rounded border border-zinc-500/30 shadow-xs shadow-zinc-500/30"
                 />
             </div>
         )}
-        <span className="text-xs text-gray-300">{skill.name}</span>
     </div>
 );
 
@@ -77,7 +73,7 @@ const ExpandedContent: FC<ExpandedContentProps> = ({ build }) => (
         {build.skills.length > 0 && (
             <>
                 <SectionTitle title="Skills" />
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-6">
                     {build.skills.map((skill, index) => (
                         <SkillItem key={index} skill={skill} index={index} />
                     ))}
@@ -182,7 +178,7 @@ export default function BuildCard({ build }: BuildCardProps) {
             </div>
 
             {expanded && (
-                <div className="relative mt-2 bg-zinc-900/95 border border-zinc-700 rounded-lg p-6 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="relative rounded-lg animate-in fade-in slide-in-from-top-2 duration-200">
                     <ExpandedContent build={build} />
                     <div className="mt-4 text-center">
                         <button

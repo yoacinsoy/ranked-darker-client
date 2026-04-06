@@ -15,8 +15,8 @@ export const builds: Build[] = [
             { name: "Weapon Mastery", image: "/classes/perks/fighter/weapon-mastery.png" },
         ],
         skills: [
-            { name: "Second Wind", image: "/classes/skills/second-wind.png", highlight: true },
-            { name: "Sprint", image: "/classes/skills/sprint.png" },
+            { name: "Second Wind", image: "/classes/skills/fighter/second-wind.png", highlight: true },
+            { name: "Sprint", image: "/classes/skills/fighter/sprint.png" },
         ],
         spells: [],
     },
@@ -34,7 +34,7 @@ export const builds: Build[] = [
             { name: "Iron Will", image: "/classes/perks/barbarian/iron-will.png" },
         ],
         skills: [
-            { name: "Whirlwind", image: "/classes/skills/barbarian/whirlwind.png", highlight: true },
+            { name: "Whirlwind", image: "/classes/skills/barbarian/whirl-wind.png", highlight: true },
             { name: "War Cry", image: "/classes/skills/barbarian/war-cry.png" },
         ],
         spells: [],
@@ -72,8 +72,8 @@ export const builds: Build[] = [
             { name: "Ranged Weapon Mastery", image: "/classes/perks/ranger/ranged-weapon-mastery.png" },
         ],
         skills: [
-            { name: "Quick Shot", image: "/classes/skills/ranger/quick-shot.png", highlight: true },
-            { name: "Field Provisions", image: "/classes/skills/ranger/field-provisions.png" },
+            { name: "Quick Shot", image: "/classes/skills/ranger/quickshot.png", highlight: true },
+            { name: "Field Provisions", image: "/classes/skills/ranger/field-ration.png" },
         ],
         spells: [],
     },
@@ -91,8 +91,8 @@ export const builds: Build[] = [
             { name: "Fire Mastery", image: "/classes/perks/wizard/fire-mastery.png" },
         ],
         skills: [
-            { name: "Spell Memory", highlight: true },
-            { name: "Meditation" },
+            { name: "Spell Memory", highlight: true, image: "/classes/skills/wizard/spell-memory.png" },
+            { name: "Meditation", image: "/classes/skills/wizard/meditation.png" },
         ],
         spells: [
             { name: "Fireball" },
@@ -113,8 +113,8 @@ export const builds: Build[] = [
             { name: "Protection from Evil", image: "/classes/perks/cleric/protection-from-evi.png" },
         ],
         skills: [
-            { name: "Holy Light", image: "/classes/skills/cleric/holy-light.png" },
-            { name: "Resurrection", image: "/classes/skills/cleric/resurrection.png" },
+            { name: "Holy Light", image: "/classes/skills/cleric/holy-purification.png" },
+            { name: "Resurrection", image: "/classes/skills/cleric/smite.png" },
         ],
         spells: [
             { name: "Lesser Heal" },
@@ -135,7 +135,7 @@ export const builds: Build[] = [
             { name: "Rapier Mastery", image: "/classes/perks/bard/rapier-mastery.png" },
         ],
         skills: [
-            { name: "Inspiring Melody", image: "/classes/skills/bard/inspiring-melody.png", highlight: true },
+            { name: "Inspiring Melody", image: "/classes/skills/bard/music-memory.png", highlight: true },
             { name: "Dissonance", image: "/classes/skills/bard/dissonance.png" },
         ],
         spells: [],
@@ -154,8 +154,8 @@ export const builds: Build[] = [
             { name: "Demon Armor", image: "/classes/perks/warlock/demon-armor.png" },
         ],
         skills: [
-            { name: "Dark Pact", image: "/classes/skills/warlock/dark-pact.png", highlight: true },
-            { name: "Soul Drain", image: "/classes/skills/warlock/soul-drain.png" },
+            { name: "Dark Pact", image: "/classes/skills/warlock/blood-pact.png", highlight: true },
+            { name: "Soul Drain", image: "/classes/skills/warlock/spell-memory.png" },
         ],
         spells: [],
     },
@@ -173,8 +173,8 @@ export const builds: Build[] = [
             { name: "Thorn Coat", image: "/classes/perks/druid/thorn-coat.png" },
         ],
         skills: [
-            { name: "Bear Form", image: "/classes/skills/druid/bear-form.png", highlight: true },
-            { name: "Entangling Roots", image: "/classes/skills/druid/entangling-roots.png" },
+            { name: "Bear Form", image: "/classes/skills/druid/shapeshift.png", highlight: true },
+            { name: "Entangling Roots", image: "/classes/skills/druid/wild-fury.png" },
         ],
         spells: [],
     },
