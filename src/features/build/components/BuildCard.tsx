@@ -51,8 +51,17 @@ interface SpellItemProps {
 }
 
 const SpellItem: FC<SpellItemProps> = ({ spell }) => (
-    <div className="flex items-center gap-2 p-2 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
-        <span className="text-xs text-gray-300">{spell.name}</span>
+    <div className="flex items-center gap-2 p-2">
+        {spell.image && (
+            <div className="relative w-12 h-12">
+                <Image
+                    src={spell.image}
+                    alt={spell.name}
+                    fill
+                    className="object-cover"
+                />
+            </div>
+        )}
     </div>
 );
 

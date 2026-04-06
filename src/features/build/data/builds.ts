@@ -95,8 +95,8 @@ export const builds: Build[] = [
             { name: "Meditation", image: "/classes/skills/wizard/meditation.png" },
         ],
         spells: [
-            { name: "Fireball" },
-            { name: "Invisibility" },
+            { name: "Fireball", image: "/classes/spells/wizard/fireball.png" },
+            { name: "Invisibility", image: "/classes/spells/wizard/invisibility.png" },
         ],
     },
     {
@@ -117,8 +117,8 @@ export const builds: Build[] = [
             { name: "Resurrection", image: "/classes/skills/cleric/smite.png" },
         ],
         spells: [
-            { name: "Lesser Heal" },
-            { name: "Holy Strike" },
+            { name: "Lesser Heal", image: "/classes/spells/cleric/lesser-heal.png" },
+            { name: "Holy Strike", image: "/classes/spells/cleric/holy-strike.png" },
         ],
     },
     {
